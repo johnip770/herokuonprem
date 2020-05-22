@@ -1,0 +1,37 @@
+{
+    "name": "MuleSoft Anypoint Platform Runtime",
+    "description": "Deploys a Mule Runtime on Heroku",
+    "repository": "https://github.com/djuang1/mule-heroku-dyno",
+    "logo": "https://raw.githubusercontent.com/djuang1/djuang1.github.io/master/img/mule-heroku-dyno/logo.svg",
+    "keywords": ["mulesoft", "anypoint platform", "integration"],
+    "buildpacks": [
+        {
+          "url": "https://github.com/heroku/heroku-buildpack-apt"
+        },
+        {
+          "url": "heroku/jvm"
+        }
+      ],
+    "env": {
+        "MULE_ENV": {
+          "description": "Anypoint Platform Environment name",
+          "required": "true"
+        },
+        "MULE_ORG": {
+          "description": "Anypoint Platform Organization name",
+          "required": "true"
+        },
+        "MULE_USERNAME": {
+          "description": "Anypoint Platform username",
+          "required": "true"
+        },
+        "MULE_PASSWORD": {
+          "description": "Anypoint Platform password",
+          "required": "true"
+        },
+        "HEROKU_APP_NAME": {
+          "description": "Name for server when registered with Runtime Manager",
+          "required": "true"
+        }
+      }
+  }
